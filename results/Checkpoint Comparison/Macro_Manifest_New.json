@@ -1,0 +1,21 @@
+{
+  "months": [
+    "2005-01",
+    "2026-05"
+  ],
+  "method": "Original transforms and Savitzky-Golay settings from Data/Data Collection",
+  "sources": {
+    "Inflation_Rate": "FRED CPIAUCSL, 12-month percent change",
+    "Interest_Rate": "FRED FEDFUNDS; Real_Rate remains Inflation_Rate - Interest_Rate",
+    "Unemployment_Rate": "FRED UNRATE",
+    "Money_Supply": "FRED M2SL",
+    "Real_GDP": "FRED GDPC1",
+    "Credit_GDP": "Old/Data.xlsx; latest quarterly observation carried forward when unreleased",
+    "VIX": "yfinance ^VIX monthly OHLC average"
+  },
+  "short_term_carry_forward": [
+    "Quarterly Credit_GDP/GDP values between releases",
+    "M2SL for a requested month newer than the latest published observation"
+  ],
+  "future_target_prediction_used": false
+}

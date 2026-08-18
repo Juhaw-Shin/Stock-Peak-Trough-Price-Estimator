@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-06-30",
+  "weight": 5,
+  "recent_value_policy": "requires ticker cache to reach the latest benchmark date; default downloads include today's partially revealed daily bar when yfinance returns it",
+  "constituents": 503,
+  "eligible_current_troughs": 292,
+  "excluded": 211,
+  "calibration_peak_samples": 11599,
+  "lower_bound_definition": "one-sided 90% local residual bound (q10)",
+  "upper_bound_definition": "one-sided 90% local residual bound (q90)",
+  "joint_interval": "central 80% (q10 to q90)",
+  "ranking": "lower-bound remaining upside from current price",
+  "short_duration_policy": "conditional duration group plus sqrt(14/duration) interval widening below 14 days",
+  "important_limitation": "Extrema are confirmed retrospectively by the original algorithm; this is not guaranteed real-time profit.",
+  "temporal_coverage_audit": {
+    "test_set": "2026 completed positive-peak samples",
+    "test_samples": 5410,
+    "lower_bound_achieved_coverage": 0.9425138632162662,
+    "upper_bound_achieved_coverage": 0.9249537892791128,
+    "central_interval_achieved_coverage": 0.8674676524953789
+  }
+}
