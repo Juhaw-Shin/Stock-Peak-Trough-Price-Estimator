@@ -1,5 +1,3 @@
-# Results in Text Form
-
 ## Checkpoint Comparison
 
 Checkpoint 5, used by the current ranking script:
