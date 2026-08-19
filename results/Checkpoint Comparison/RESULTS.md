@@ -1,6 +1,6 @@
-# Results in text form
+# Results in Text Form
 
-## Checkpoint comparison
+## Checkpoint Comparison
 
 Checkpoint 5, used by the current ranking script:
 
@@ -14,19 +14,19 @@ Metric-specific winners:
 - New 2026 validation RMSE: checkpoint 4, RMSE 11.9970.
 - New 2026 direction accuracy: checkpoint 5, 98.70%.
 
-The newer holdout retained strong rank correlation and direction accuracy but had worse magnitude error. Checkpoint 5 is a design choice, not a universal numerical winner.
+The newer holdout retained strong rank correlation and direction accuracy but had higher magnitude error. Checkpoint 5 is a design choice, not a universal numerical winner.
 
-## Interval calibration
+## Interval Calibration
 
 The 2026 completed-positive-peak audit used 5,410 cases:
 
-- Lower-bound achieved coverage: 94.25% against a nominal 90% target.
-- Upper-bound achieved coverage: 92.50% against a nominal 90% target.
-- Central interval achieved coverage: 86.75% against a nominal 80% target.
+- Achieved lower-bound coverage: 94.25% against a nominal 90% target.
+- Achieved upper-bound coverage: 92.50% against a nominal 90% target.
+- Achieved central interval coverage: 86.75% against a nominal 80% target.
 
-All three intervals were conservative on this audit.
+All three intervals were conservative in this audit.
 
-## Training-cost graph in text form
+## Training-Cost Graph in Text Form
 
 `training_cost.html` contains 21 recorded checkpoint MSE values.
 
@@ -36,8 +36,8 @@ All three intervals were conservative on this audit.
 - Largest outlier: 1,524.07 at the fifth zero-based graph position.
 - Linear fit shown by the graph: 328.05 at the beginning to 39.95 at the end.
 
-The fitted decline is visually strong, but the single 1,524 outlier heavily affects that line. The raw checkpoints fluctuate, so the final lower error is more defensible evidence than the fitted slope alone.
+The fitted decline is visually strong, but the single 1,524 outlier heavily affects that line. The raw checkpoints fluctuate, so the lower final error is more defensible evidence than the fitted slope alone.
 
-## Preserved prediction output
+## Preserved Prediction Output
 
-The saved 2026-06-23 run evaluated 503 S&P 500 constituents, marked 265 as eligible current trough cases, and excluded 238. These rows are historical output and must not be read as current investment recommendations.
+The saved 2026-06-23 run evaluated 503 S&P 500 constituents, marked 265 as eligible current trough cases, and excluded 238. These rows are historical output and must not be interpreted as current investment recommendations.
