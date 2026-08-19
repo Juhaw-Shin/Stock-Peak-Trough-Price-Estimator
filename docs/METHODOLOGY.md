@@ -17,3 +17,9 @@ The predictor finds completed historical examples near the current feature state
 ## Ranking
 
 Candidates are ranked based on lower remaining upside, expected remaining upside, interval width, and confidence. Short-duration cases receive wider intervals because early trough estimates have less supporting evidence.
+
+## Validation Construction
+
+The newer evaluation uses stock data collected from 2026 after the original training pipeline was developed. For each detected extremum, multiple samples are constructed at different observation durations before the next extremum. These samples therefore provide different temporal perspectives of the same eventual transition and are not statistically independent.
+
+The prediction target is the percentage return from the current detected trough to the subsequent detected peak.
