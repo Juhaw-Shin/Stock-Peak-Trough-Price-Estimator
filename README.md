@@ -1,4 +1,4 @@
-# Market Prediction AI
+# Stock Trough-to-Peak Return Estimator
 
 A research system that predicts the return from an identified stock trough to its next local peak, then calibrates uncertainty bounds and ranks current S&P 500 candidates.
 
@@ -31,15 +31,15 @@ The production prediction script uses checkpoint 5.
 - New 2026 validation with 12,191 samples across 202 tickers: Pearson 0.8573, Spearman 0.8915, direction accuracy 98.70%, RMSE 12.14 percentage points.
 - The calibrated interval achieved 94.25% lower-bound coverage, 92.50% upper-bound coverage, and 86.75% central coverage. These exceed the nominal 90%, 90%, and 80% targets, so the intervals were conservative on this holdout.
 
-Checkpoint 5 was not the winner on every metric: checkpoint 4 had the lowest new-2026 RMSE, while checkpoints 6 and 7 were strongest on the original validation. This is interpreted as overfitting.
+Checkpoint 5 was not the winner on every metric: checkpoint 4 had the lowest new-2026 RMSE, while checkpoints 6 and 7 were strongest on the original validation. Later checkpoints improve some metrics on the original validation set but do not consistently improve the 2026 evaluation. This pattern may reflect overfitting or differences in the evaluation samples; the current evidence does not isolate the cause.
 
 ## Repository Layout
 
 ```text
 src/       Current prediction, validation, model, and data-processing code
-NPZ/       Small learned weights, biases, normalization, and macro coefficients
-results/   Checkpoint comparison and recent stock predictions
-data/      Macroeconomic and stock-related data
+NPZ/       Saved weights, biases, normalization statistics, and macroeconomic coefficients
+results/   Checkpoint comparisons and preserved prediction outputs
+data/      Stock-related and macroeconomic data
 ```
 
 ## Main Commands
