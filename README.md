@@ -35,12 +35,12 @@ Checkpoint 5 was not the winner on every metric: checkpoint 4 had the lowest new
 
 ## Repository Layout
 
-'''text
+```text
 src/       Current prediction, validation, model, and data-processing code
 NPZ/       Small learned weights, biases, normalization, and macro coefficients
 results/   Checkpoint comparison and recent stock predictions
 data/      Macroeconomic and stock-related data
-'''
+```
 
 ## Main Commands
 
